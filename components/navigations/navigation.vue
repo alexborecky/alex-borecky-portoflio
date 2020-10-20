@@ -102,7 +102,7 @@ export default {
 <style lang="scss" scoped>
 
 .navigation {
-    background-color: transparent;
+    background-color: white;
     position: sticky;
     top: 0;
     z-index: 1000;

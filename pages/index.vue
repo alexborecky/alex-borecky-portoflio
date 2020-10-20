@@ -7,11 +7,26 @@
           <h1> <nuxt-link to="/about" class="link" href=""> <div class="highlight"></div> <div class="underline"></div> Alex Borecky </nuxt-link> is a Product Designer based in Prague, currently working as a freelancer </h1>
         </div>
       </div>
-      <div class="featured box flex center">
+      <div class="featured box flex center-column-top">
         <feature
           projectTitle="Shoptetak.cz"
           projectDes="Website for a partnered client which provides services in e-commerce design and development"
           featureImg="https://ik.imagekit.io/alexborecky/My__Web/shoptetak_W-mXIlftz.png"
+        />
+        <feature class="switch"
+          projectTitle="Opal"
+          projectDes="A Shoptet template focusing on specific industry of Fashion, created for Shoptetak.cz"
+          featureImg="https://ik.imagekit.io/alexborecky/My__Web/opal_FuFKlNQNJpy8.png"
+        />
+        <feature class="dark-image low-image"
+          projectTitle="Chat Thread"
+          projectDes="Thread feature study, which enriches experience of organisation in group channels "
+          featureImg="https://ik.imagekit.io/alexborecky/My__Web/phone_kM28kFfUMii.png"
+        />
+        <feature class="switch blue-image low-image"
+          projectTitle="smart.res"
+          projectDes="Reservation and payment application that ease the process of going out to a restaurant"
+          featureImg="https://ik.imagekit.io/alexborecky/My__Web/smart.res_Yt_EwNct6.png"
         />
       </div>
     </div>
@@ -38,6 +53,7 @@ export default {
       position: relative;
       transition: .4s ease-in-out;
       .highlight {
+        top: -4px;
         position: absolute;
         height: 105%;
         width: 0%;
@@ -49,7 +65,7 @@ export default {
       .underline {
         position: absolute;
         height: 2px;
-        bottom: -4px;
+        bottom: 0;
         width: 95%;
         background-color: $web-black;
         z-index: -1;

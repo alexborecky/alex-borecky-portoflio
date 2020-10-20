@@ -7,13 +7,13 @@
                 <div class="feature-title">
                     <h2>{{projectTitle}}</h2>
                     <p>{{projectDes}}</p>
+                    <nuxt-link class="flex center case-study" to="">
+                        View Case Study 
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="#1E1E1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </nuxt-link>
                 </div>
-                <nuxt-link class="flex center case-study" to="">
-                    View Case Study 
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 18L15 12L9 6" stroke="#1E1E1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </nuxt-link>
             </div>
     </div>
 </template>
@@ -37,7 +37,7 @@ export default {
 .feature {
     margin: 0 0 160px 0;
     justify-content: space-between;
-    width: 100%;
+    min-width: 100%;
     .feature-content {
         margin-top: 120px;
         max-width: 340px;
@@ -58,9 +58,12 @@ export default {
     .feature-image {
         justify-content: center;
         background-color: $card-bkg;
+        padding: 120px;
+        min-width: 65%;
+        max-width: 65%;
         img {
             height: 24vw;
-            margin: 120px;
+            // margin: 120px;
         }
     }
     @media only screen and (max-width: 1440px) {
@@ -109,16 +112,37 @@ export default {
     div:first-child {
         order: 2;
     }
-    div:nth-child(2) {
-        order: 1;
+    // div:nth-child(2) {
+    //     order: 1;
+    // }
+    // @media only screen and (max-width: 768px) {
+    //     background-color: rgba($color: $main-blue, $alpha: .1);
+    //     div:first-child {
+    //         order: 1;
+    //     }
+    //     div:nth-child(2) {
+    //         order: 2;
+    //     }
+    // }
+}
+
+.dark-image {
+    .feature-image {
+        background: #131313;
     }
-    @media only screen and (max-width: 768px) {
-        background-color: rgba($color: $main-blue, $alpha: .1);
-        div:first-child {
-            order: 1;
-        }
-        div:nth-child(2) {
-            order: 2;
+}
+
+.blue-image {
+    .feature-image {
+        background: $main-blue;
+    }
+}
+
+.low-image {
+    .feature-image {
+        padding-bottom: 0px;
+        img {
+            margin-top: 120px;
         }
     }
 }
