@@ -1,72 +1,72 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        portfolio
-      </h1>
-      <h2 class="subtitle">
-        Alex Borecky&#39;s Product Design Portfolio
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div class="hero">
+    <div class="container">
+      <div class="v-proposition flex center">
+        <div class="">
+          <p>Welcome 👋</p>
+          <h1> <nuxt-link to="/about" class="link" href=""> <div class="highlight"></div> <div class="underline"></div> Alex Borecky </nuxt-link> is a Product Designer based in Prague, currently working as a freelancer </h1>
+        </div>
+      </div>
+      <div class="featured box flex center">
+        <feature
+          projectTitle="Shoptetak.cz"
+          projectDes="Website for a partnered client which provides services in e-commerce design and development"
+          featureImg="https://ik.imagekit.io/alexborecky/My__Web/shoptetak_W-mXIlftz.png"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+
 
 export default {
   components: {
-    Logo
+    
   }
 }
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+<style lang="scss" scoped>
+
+.v-proposition {
+  height: 60vh;
+  h1 {
+    max-width: 860px;
+    .link {
+      position: relative;
+      transition: .4s ease-in-out;
+      .highlight {
+        position: absolute;
+        height: 105%;
+        width: 0%;
+        background-color: $main-blue;
+        z-index: -1;
+        // transform: scaleX(0);
+        transition: .4s ease-in-out;
+      }
+      .underline {
+        position: absolute;
+        height: 2px;
+        bottom: -4px;
+        width: 95%;
+        background-color: $web-black;
+        z-index: -1;
+        // transform: scaleX(0);
+        transition: .4s ease-in-out;
+      }
+      &:hover {
+        .highlight {
+          width: 95%;
+        }
+        .underline {
+          opacity: 0;
+        }
+        color: white;
+      }
+    }
+  }
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 </style>

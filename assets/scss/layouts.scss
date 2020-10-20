@@ -1,0 +1,172 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    @media only screen and (max-width: 1280px) {
+        min-height: 50vh;
+    }
+}
+
+.box {
+    max-width: 100%;
+    min-height: 24vh;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1360px;
+    @media only screen and (max-width: 1280px) {
+        width: 90%;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    align-items: center;
+}
+
+.middle {
+    justify-content: center;
+    align-items: center;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.column {
+    flex-flow: column;
+}
+
+.center-column {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-column-top {
+    flex-flow: column;
+    align-items: center;
+}
+
+.center-column-left {
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+.center-column-right {
+    flex-flow: column;
+    align-items: flex-end;
+}
+
+.half {
+    width: 50%;
+    @media only screen and (max-width: 740px) {
+        width: 100%;
+    }
+}
+
+.col3 {
+    width: calc(100%/3);
+    @media only screen and (max-width: 960px) {
+        width: 70%;
+    }
+    @media only screen and (max-width: 450px) {
+        width: 100%;
+    }
+}
+
+.col4 {
+    width: calc(100%/4);
+}
+
+.box-content {
+    h2 {
+        max-width: 720px;
+    }
+    p {
+        margin-top: 24px;
+        max-width: 600px;
+    }
+    a {
+        margin-top: 64px;
+    }
+}
+
+.buttons {
+    margin-top: 64px;
+    a:first-child {
+        margin-right: 24px;
+        @media only screen and (max-width: 960px) {
+            margin-right: 0px;
+            margin-bottom: 16px;
+        }
+    }
+    @media only screen and (max-width: 960px) {
+        flex-flow: column;
+        width: 100%;
+        margin-top: 40px;
+        width: 100%;
+        display: flex;
+        a {
+            width: 240px;
+        }
+    }
+    @media only screen and (max-width: 740px) {
+        align-items: center;
+        a {
+            max-width: 100%;
+        }
+    }
+}
+
+.mobile {
+    display: none;
+    @media only screen and (max-width: 450px) {
+        display: block;
+    }
+}
+.desktop {
+    @media only screen and (max-width: 450px) {
+        display: none;
+    }
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+button {
+    border: none;
+    color: white;
+    background-color: $main-blue;
+    border-radius: 8px;
+    svg {
+        margin: auto;
+    }
+}
+
+.medal {
+    height: 56px;
+    margin: 24px 0 0 0;
+}
+
+.blue-box {
+    background-color: $card-bkg;
+}
+
+.red-box {
+    background-color: rgba($color: $card-red, $alpha: .08);
+}
