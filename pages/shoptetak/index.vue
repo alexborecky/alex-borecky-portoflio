@@ -6,7 +6,7 @@
 
 <script>
     export default {
-        name: 'workPage'
+        name: 'shoptetak'
     }
 </script>
 

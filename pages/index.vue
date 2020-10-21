@@ -8,24 +8,28 @@
         </div>
       </div>
       <div class="featured box flex center-column-top">
-        <feature
+        <projectCard
           projectTitle="Shoptetak.cz"
           projectDes="Website for a partnered client which provides services in e-commerce design and development"
+          projectPath="/shoptetak"
           featureImg="https://ik.imagekit.io/alexborecky/My__Web/shoptetak_W-mXIlftz.png"
         />
-        <feature class="switch"
+        <projectCard class="switch"
           projectTitle="Opal"
           projectDes="A Shoptet template focusing on specific industry of Fashion, created for Shoptetak.cz"
+          projectPath="/opal"
           featureImg="https://ik.imagekit.io/alexborecky/My__Web/opal_FuFKlNQNJpy8.png"
         />
-        <feature class="dark-image low-image"
+        <projectCard class="dark-image low-image"
           projectTitle="Chat Thread"
           projectDes="Thread feature study, which enriches experience of organisation in group channels "
+          projectPath="/chat"
           featureImg="https://ik.imagekit.io/alexborecky/My__Web/phone_kM28kFfUMii.png"
         />
-        <feature class="switch blue-image low-image"
+        <projectCard class="switch blue-image low-image"
           projectTitle="smart.res"
           projectDes="Reservation and payment application that ease the process of going out to a restaurant"
+          projectPath="/smartres"
           featureImg="https://ik.imagekit.io/alexborecky/My__Web/smart.res_Yt_EwNct6.png"
         />
       </div>
@@ -49,39 +53,39 @@ export default {
   height: 60vh;
   h1 {
     max-width: 860px;
-    .link {
-      position: relative;
-      transition: .4s ease-in-out;
-      .highlight {
-        top: -4px;
-        position: absolute;
-        height: 105%;
-        width: 0%;
-        background-color: $main-blue;
-        z-index: -1;
-        // transform: scaleX(0);
-        transition: .4s ease-in-out;
-      }
-      .underline {
-        position: absolute;
-        height: 2px;
-        bottom: 0;
-        width: 95%;
-        background-color: $web-black;
-        z-index: -1;
-        // transform: scaleX(0);
-        transition: .4s ease-in-out;
-      }
-      &:hover {
-        .highlight {
-          width: 95%;
-        }
-        .underline {
-          opacity: 0;
-        }
-        color: white;
-      }
-    }
+    // .link {
+    //   position: relative;
+    //   transition: .4s ease-in-out;
+    //   .highlight {
+    //     top: -4px;
+    //     position: absolute;
+    //     height: 105%;
+    //     width: 0%;
+    //     background-color: $main-blue;
+    //     z-index: -1;
+    //     // transform: scaleX(0);
+    //     transition: .4s ease-in-out;
+    //   }
+    //   .underline {
+    //     position: absolute;
+    //     height: 2px;
+    //     bottom: 0;
+    //     width: 95%;
+    //     background-color: $web-black;
+    //     z-index: -1;
+    //     // transform: scaleX(0);
+    //     transition: .4s ease-in-out;
+    //   }
+    //   &:hover {
+    //     .highlight {
+    //       width: 95%;
+    //     }
+    //     .underline {
+    //       opacity: 0;
+    //     }
+    //     color: white;
+    //   }
+    // }
   }
 }
 

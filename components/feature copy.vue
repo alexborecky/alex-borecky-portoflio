@@ -4,16 +4,17 @@
                 <img :src="featureImg" :alt="featureAlt">
             </div>
             <div class="feature-content flex center-column-left">
-                <div class="feature-title">
+                <section class="feature-title">
                     <h2>{{projectTitle}}</h2>
                     <p>{{projectDes}}</p>
-                    <nuxt-link class="flex center case-study" to="">
+                </section>
+                <nuxt-link class="flex center case-study" to="">
+                        <div class="underline"></div>
                         View Case Study 
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9 18L15 12L9 6" stroke="#1E1E1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </nuxt-link>
-                </div>
             </div>
     </div>
 </template>
@@ -52,6 +53,10 @@ export default {
             margin-top: 40px;
             svg {
                 margin-left: 8px;
+                transition: .2s ease-in-out;
+            }
+            &:hover {
+                opacity: 1;
             }
         }
     }

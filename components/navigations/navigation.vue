@@ -1,6 +1,6 @@
 <template>
     <div class="navigation flex full-width navbar center" :class="{ 'hidden-navbar': !showNavbar, scrolled: !scrolledNav}">
-        <div class="nav-container flex">
+        <div class="nav-container container flex">
             <div class="nav-content flex center">
                 <nuxt-link to="/" class="logo"> 
                     <svg width="127" height="14" viewBox="0 0 127 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,8 +44,18 @@
                 </nuxt-link>
                 <div class="links flex middle">
                     <ul class="flex center">
-                        <li><nuxt-link to="/work">Work</nuxt-link></li>
-                        <li><nuxt-link to="/about">About</nuxt-link></li>
+                        <li>
+                            <nuxt-link to="/" class="nav-link">
+                                <div class="highlight"></div>
+                                Work
+                            </nuxt-link>
+                        </li>
+                        <li>
+                            <nuxt-link to="/about" class="nav-link">
+                                <div class="highlight"></div>
+                                About
+                            </nuxt-link>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -109,33 +119,9 @@ export default {
     justify-content: center;
     transition: 0.2s all ease-out;
     margin-top: 80px;
-    .white-cover {
-        width: 100%;
-        height: 100px;
-        background-color: white;
-        position: absolute;
-        top: -24px;
-        z-index: -1;
-    }
-    @media only screen and (max-width: 960px) {
-        height: 80px;
-        position: fixed !important;
-        margin-top: 0;
-        .links {
-            display: none;  
-        }
-        .container {
-            width: 100%;
-            height: 100px;
-            .logo {
-                img {
-                    height: 32px !important;
-                }
-            }
-        }
-    }
+    width: 100%;
     .nav-container {
-        width: 100%;
+        width: 80%;
         max-width: 1360px;
         .nav-content {
             justify-content: space-between;
@@ -154,10 +140,7 @@ export default {
             padding-left: 0;
             list-style: none;
             li {
-                margin-left: 80px;
-                @media only screen and (max-width: 1600px) {
-                    margin-left: 40px;
-                }
+                margin-left: 40px;
                 a {
                     svg {
                         height: 16px;
@@ -165,11 +148,6 @@ export default {
                     }
                     &:hover {
                         color: $main-blue;
-                        svg {
-                            path {
-                                stroke: $main-blue
-                            }
-                        }
                     }
                 }
             }
